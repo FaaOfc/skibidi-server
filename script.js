@@ -8,24 +8,23 @@ const categoryDescriptions = {
 
 const categories = {
   "List Admin": [
-
-      { name: "Owner", subname: "Nerrieru" image: "image.jpg", desc: "Pemilik Group\nDan\nPemilik Server" },
-      { name: "Tangan Kanan", subname: "Faanrky" image: "image.jpg", desc: "Admin Dari Segala Admin" },
-      { name: "Admin", subname: "Alvaro" image: "image.jpg", desc: "Admin Tetap\n(Orang Dalam)" },
-      { name: "Admin", subname: "Raffi" image: "image.jpg", desc: "Admin" },
-      { name: "Admin Kontrak", subname: "Bima" image: "image.jpg", desc: "Kontrak Admin Sampai\n31 Mei 2025" },
+    { name: "Owner", subname: "Nerrieru", image: "image.jpg", desc: "Pemilik Group\nDan\nPemilik Server" },
+    { name: "Tangan Kanan", subname: "Faanrky", image: "image.jpg", desc: "Admin Dari Segala Admin" },
+    { name: "Admin", subname: "Alvaro", image: "image.jpg", desc: "Admin Tetap\n(Orang Dalam)" },
+    { name: "Admin", subname: "Raffi", image: "image.jpg", desc: "Admin" },
+    { name: "Admin Kontrak", subname: "Bima", image: "image.jpg", desc: "Kontrak Admin Sampai\n31 Mei 2025" }
   ],
   "Donasi": [
-      { name: "Top Donatur", subname: "Faanrky", image: "image.jpg", desc: "Rp. 30.000" },
-      { name: "#2", subname: "Alvaro", image: "image.jpg", desc: "Rp. 20.000" },
-      { name: "#3", subname: "Nerrieru", image: "image.jpg", desc: "Rp. 5.000" },
-      { name: "#4", subname: "Hanayosiro", image: "image.jpg", desc: "Rp. 5.000" },
-      { name: "#5", subname: "Lyne", image: "image.jpg", desc: "Rp. 5.000" },
-      { name: "#6", subname: "Dann", image: "image.jpg", desc: "Rp. 5.000" }
+    { name: "Top Donatur", subname: "Faanrky", image: "image.jpg", desc: "Rp. 30.000" },
+    { name: "#2", subname: "Alvaro", image: "image.jpg", desc: "Rp. 20.000" },
+    { name: "#3", subname: "Nerrieru", image: "image.jpg", desc: "Rp. 5.000" },
+    { name: "#4", subname: "Hanayosiro", image: "image.jpg", desc: "Rp. 5.000" },
+    { name: "#5", subname: "Lyne", image: "image.jpg", desc: "Rp. 5.000" },
+    { name: "#6", subname: "Dann", image: "image.jpg", desc: "Rp. 5.000" }
   ]
 };
 
-    function renderProducts() {
+function renderProducts() {
   const container = document.getElementById("listContainer");
   container.innerHTML = "";
 
@@ -34,10 +33,10 @@ const categories = {
     section.classList.add("category");
 
     section.innerHTML = `
-  <h2>${category}</h2>
-  <div class="category-desc">${categoryDescriptions[category] || ""}</div>
-  <div class="slider" id="${category}"></div>
-`;
+      <h2>${category}</h2>
+      <div class="category-desc">${categoryDescriptions[category] || ""}</div>
+      <div class="slider" id="${category}"></div>
+    `;
     container.appendChild(section);
 
     const slider = section.querySelector(".slider");
@@ -53,6 +52,7 @@ const categories = {
           <div class="desc" id="desc-${category}-${i}">${formattedDesc}</div>
           <div class="btn-group">
             <button class="btn" onclick="toggleDesc('${category}', ${i})">Lihat Deskripsi</button>
+          </div>
         </div>
       `;
     });
@@ -70,25 +70,13 @@ function scrollSlider(cat, dir) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const qrisBox = document.getElementById("rulesBox");
+  const rulesBox = document.getElementById("rulesBox");
   const toggleBtn = document.getElementById("toggleRulesBtn");
 
   toggleBtn.addEventListener("click", function () {
-    qrisBox.classList.toggle("show");
-    if (qrisBox.classList.contains("show")) {
-      toggleBtn.textContent = "Sembunyikan Rules";
-    } else {
-      toggleBtn.textContent = "Tampilkan Rules";
-    }
+    rulesBox.classList.toggle("show");
+    toggleBtn.textContent = rulesBox.classList.contains("show") ? "Sembunyikan Rules" : "Tampilkan Rules";
   });
+
+  renderProducts();
 });
-
-renderProducts()
-
-
-  //  { name: "barang", price: 1000, image: "20250325_070407.jpg", desc: "Desk" },
- //   { name: "barang", price: 1000, image: "20250325_070407.jpg", desc: "Desk" },
- //   { name: "barang", price: 1000, image: "20250325_070407.jpg", desc: "Desk" },
-//    { name: "barang", price: 1000, image: "20250325_070407.jpg", desc: "Desk" },
-
-       
