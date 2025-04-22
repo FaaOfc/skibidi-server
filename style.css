@@ -216,7 +216,7 @@ body {
   text-decoration: none;
   transition: 0.3s;
   text-align: center;
-  font-size: 10px;
+  font-size: 15px;
   cursor: pointer;
   width: calc(50% - 10px); /* agar pas 2 kolom dengan gap */
   box-sizing: border-box;
