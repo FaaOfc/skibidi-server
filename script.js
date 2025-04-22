@@ -26,7 +26,7 @@ const categories = {
 };
 
     function renderProducts() {
-  const container = document.getElementById("productContainer");
+  const container = document.getElementById("listContainer");
   container.innerHTML = "";
 
   for (const category in categories) {
@@ -50,12 +50,9 @@ const categories = {
             <h3>${p.name}</h3>
             <h4>${p.subname}</h4>
           </div>
-          <p>Rp. ${p.price.toLocaleString()}</p>
           <div class="desc" id="desc-${category}-${i}">${formattedDesc}</div>
           <div class="btn-group">
-            <a class="btn" href="https://wa.me/62895404774374">Beli</a>
             <button class="btn" onclick="toggleDesc('${category}', ${i})">Lihat Deskripsi</button>
-          </div>
         </div>
       `;
     });
@@ -73,15 +70,15 @@ function scrollSlider(cat, dir) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const qrisBox = document.getElementById("qrisBox");
-  const toggleBtn = document.getElementById("toggleQrisBtn");
+  const qrisBox = document.getElementById("rulesBox");
+  const toggleBtn = document.getElementById("toggleRulesBtn");
 
   toggleBtn.addEventListener("click", function () {
     qrisBox.classList.toggle("show");
     if (qrisBox.classList.contains("show")) {
-      toggleBtn.textContent = "Sembunyikan QRIS";
+      toggleBtn.textContent = "Sembunyikan Rules";
     } else {
-      toggleBtn.textContent = "Tampilkan QRIS";
+      toggleBtn.textContent = "Tampilkan Rules";
     }
   });
 });
