@@ -1,9 +1,19 @@
 body {
   margin: 0;
-  font-family: 'Bungee', cursive;
+  font-family: 'MinecraftTen', cursive;
   background: url('Background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
+  font-family: 'Minecraft', sans-serif;
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('mc.otf') format('truetype');
+}
+@font-face {
+  font-family: 'MinecraftTen';
+  src: url('mcc.ttf') format('truetype');
 }
 
 .container {
