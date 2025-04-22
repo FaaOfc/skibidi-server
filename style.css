@@ -199,9 +199,15 @@ body {
   margin: -10px 0 20px 0;
 }
 
-.tbl{
+.tbl-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tbl {
   font-family: 'Bungee', cursive;
-  display: block;
   padding: 10px;
   background: black;
   color: white;
@@ -209,18 +215,17 @@ body {
   border-radius: 20px;
   text-decoration: none;
   transition: 0.3s;
-  width: 100%;
   text-align: center;
-  box-sizing: border-box;
   font-size: 10px;
-  gap: 5px;
   cursor: pointer;
+  width: calc(50% - 10px); /* agar pas 2 kolom dengan gap */
+  box-sizing: border-box;
 }
 
 .tbl:hover {
   background: white;
   color: black;
-}
+  }
 
 .fade {
   opacity: 0;
