@@ -1,4 +1,4 @@
-const categoryDescriptions = {
+lhaconst categoryDescriptions = {
   "List Admin": "List Admin Grup Server",
   "Donasi": "Donasi Untuk Perpanjangan Server\nRp 70.000/Rp 110.000",
   "Topup": "Topup Game",
@@ -12,7 +12,7 @@ const categories = {
     { name: "Tangan Kanan", subname: "Faanrky", image: "image.jpg", desc: "Admin Dari Segala Admin" },
     { name: "Admin", subname: "Alvaro", image: "image.jpg", desc: "Admin Tetap\n(Orang Dalam)" },
     { name: "Admin", subname: "Raffi", image: "image.jpg", desc: "Admin" },
-    { name: "Admin Kontrak", subname: "Bima", image: "image.jpg", desc: "Kontrak Admin Sampai\n31 Mei 2025" }
+    { name: "Admin", subname: "Fauzan", image: "image.jpg", desc: "Admin" }
   ],
   "Donasi": [
     { name: "Top Donatur", subname: "Faanrky", image: "image.jpg", desc: "Rp. 30.000" },
